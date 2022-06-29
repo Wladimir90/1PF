@@ -1,0 +1,71 @@
+.btn-personalizado:hover {
+    background-color: #0d6efd;
+}
+
+.sidebar-nav ul li a {
+  font-size: 26px;
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px;
+  transition: 0.5s;
+}
+.sidebar-nav ul li a:hover {
+  background-color: #eeeeee;
+  border-radius: 4px;
+}
+.sidebar-nav .offcanvas {
+  width: 220px;
+  border: none;
+}
+.sidebar-nav .offcanvas ul li a span {
+  font-size: 18px;
+  position: relative;
+  top: -4px;
+  transition: 0.5s;
+}
+.sidebar-nav .offcanvas.show ul li a:hover span {
+  padding-left: 10px;
+}
+.sidebar-nav .dropdown-toggle::after {
+  position: relative;
+  top: 3px;
+}
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
+{
+  margin-right: 5px;
+}
+
+
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}

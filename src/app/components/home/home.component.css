@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+  }
+
+  th {
+    width: 15%;
+  }
+
+  .iconsTable {
+    margin-left: 8%;
+    cursor: pointer;
+  };
