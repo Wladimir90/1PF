@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'; 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DatosalumnosService } from 'src/app/services/datosalumnos.service';
+import { Alumno } from '../../../interfaces/alumno';
 
 @Component({
   selector: 'app-editaralumno',
@@ -17,6 +19,7 @@ export class EditaralumnoComponent implements OnInit {
     email: new FormControl("", [Validators.required, Validators.email])
   })
 
+  alumnoSelecionado: Alumno | null = null;
 
   constructor(public dialogRef: MatDialogRef<EditaralumnoComponent>,
               @Inject(MAT_DIALOG_DATA) public data:any) {

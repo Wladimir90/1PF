@@ -1,5 +1,5 @@
 
-
+<div class="container mt-4">
 <button mat-button (click)="openDialog()" class="btn btn-success mb-3">Añadir Alumno</button>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -34,16 +34,20 @@
   <ng-container matColumnDef="acciones">
       <th appTamanofuente mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element" class="text-center">
-          <a class="iconsTable" style="color: #212529;">
+          <a class="iconsTable" style="color: #212529;" matTooltip="Editar">
               <mat-icon class="btn-edit" (click)="openDialogEdit(element)">edit</mat-icon>
           </a>
-          <a class="iconsTable" style="color: #dc3545;">
+          <a class="iconsTable" style="color: #dc3545;" matTooltip="Eliminar">
               <mat-icon class="btn-delete" (click)="deleteUser(element)">delete</mat-icon>
           </a>
 
       </td>
-    </ng-container>    
+    </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<h1 class="mt-2 bg-dark text-white fw-bold text-center" *ngIf="cantidadAlumno$ | async as cantidadAlumno">
+  Canatidad de alumnos: {{ cantidadAlumno }}
+</h1>
+</div>

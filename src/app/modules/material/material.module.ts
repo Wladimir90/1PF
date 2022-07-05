@@ -12,13 +12,34 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NombreapellidoPipe } from '../../pipes/nombreapellido.pipe';
 import { MatDialogModule} from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
 
 @NgModule({
   declarations: [ ],
-  exports:[ MatTableModule,],
+  exports:[ 
+    MatTableModule, 
+    MatSidenavModule,
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTooltipModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatNativeDateModule
+  ],
 
   imports: [
     CommonModule,
@@ -33,7 +54,10 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatTooltipModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatNativeDateModule
   ],
   
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

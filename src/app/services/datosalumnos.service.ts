@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { Alumno } from '../interfaces/alumno';
 
 @Injectable({
@@ -22,8 +23,22 @@ export class DatosalumnosService {
 
   constructor() { }
 
-    getAlumno() {
-      return this.listaAlumnos.slice();
-    }
-
+  cantidadAlumnoObservable(data:any) { 
+    let contador = 1;
+    return of (data).pipe(
+      map ((data) => data.length),
+      catchError((error) => {throw new Error (error)})
+    )
+  }
+    //Obtiene lista completa de alumnos promesa.
+  obtenerAlumnos():Promise<[]>{
+    return new Promise((resolve, reject) => {
+      if(this.listaAlumnos.length != 0){
+        const lista:any = this.listaAlumnos;
+        return resolve (lista)
+      }else{
+        reject ({mensaje: 'Error al cargar lista de alumno.'})
+      }
+    })
+  }
 }
