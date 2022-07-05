@@ -98,16 +98,6 @@ export class ListadealumnosComponent {
         
         })
 
-    
-
-    /* this.datosalumnosService.cantidadAlumnoObservable(this.dataSource).subscribe({
-      next(position) {
-        console.log('Current Position: ', position);
-      },
-      error(msg) {
-        console.log('Error Getting Location: ', msg);
-      }
-    }); */
   }
 
   ngOnDestroy() { 
