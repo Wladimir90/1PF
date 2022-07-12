@@ -1,15 +1,15 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatTable, MatTableDataSource } from '@angular/material/table';
 import { DataSource } from '@angular/cdk/table';
-import { Alumno } from '../../interfaces/alumno';
-import { NombreapellidoPipe } from '../../pipes/nombreapellido.pipe';
+import { NombreapellidoPipe } from 'src/app/pipes/nombreapellido.pipe';
 import { FormularioinscripcionComponent } from '../formularioinscripcion/formularioinscripcion.component';
-import { EditaralumnoComponent } from '../editaralumno/editaralumno/editaralumno.component';
+import { EditaralumnoComponent } from '../editaralumno/editaralumno.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DatosalumnosService } from 'src/app/services/datosalumnos.service';
 import Swal from 'sweetalert2';
 import { Observable, Subscription } from 'rxjs';
 import { MatPaginator } from '@angular/material/paginator';
+import { Alumno } from 'src/app/interfaces/alumno';
 
 const listaAlumnos: Alumno[] = [];
 
@@ -38,7 +38,6 @@ export class ListadealumnosComponent {
         this.dataSource = [...this.dataSource, data];
         this.cantidadAlumno$ = this.datosalumnosService.cantidadAlumnoObservable(this.dataSource);
       }else{
-        alert('sin cambios');
       }
     });
   }

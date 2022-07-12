@@ -1,0 +1,10 @@
+.contenedor-cursos{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}

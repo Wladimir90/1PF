@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from '../../interfaces/alumno';
+import { Alumno } from 'src/app/interfaces/alumno';
 
 @Component({
   selector: 'app-home',

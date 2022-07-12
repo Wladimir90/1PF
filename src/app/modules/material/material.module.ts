@@ -38,13 +38,12 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDialogModule,
     MatSlideToggleModule,
     MatMenuModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
 
   imports: [
     CommonModule,
     MatButtonModule,
-    MatCardModule,
     MatIconModule,
     MatInputModule,
     MatToolbarModule,

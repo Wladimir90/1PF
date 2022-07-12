@@ -12,9 +12,9 @@ export class SidenavComponent implements OnDestroy {
 
   fillerNav = [
     {name: "Home", route: "HomeComponent",icon:"home"},
-    {name: "Alumnos", route:"",icon:"group"},
+    {name: "Alumnos", route:"alumnos",icon:"group"},
     {name: "Cursos", route:"",icon:"menu_book"},
-    {name: "Clases", route:"",icon:"school"},
+    {name: "Inscripciones", rote:"FormularioinscripcionComponent",icon:"school"},
     {name: "Contacto", route:"",icon:"mail"}
 ];
 

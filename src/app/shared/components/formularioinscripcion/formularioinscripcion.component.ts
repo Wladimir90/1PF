@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'; 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Alumno } from 'src/app/interfaces/alumno';
+import { Alumno } from '../../../interfaces/alumno';
 import Swal from 'sweetalert2';
 
 
