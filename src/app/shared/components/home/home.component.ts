@@ -12,15 +12,25 @@ export class HomeComponent implements OnInit {
   alumnos : Alumno[] = [];
 
   constructor() { 
-    this.anadirAlumno(this.crearAlummno('Francisco', 'Santibañez', 195547858, 964147009, 'correo@correo.cl'));
   }
 
   anadirAlumno(alumno : Alumno) {
     this.alumnos.push(alumno);
   }
 
-  crearAlummno(nombre: any, apellido: any, rut: any, telefono: any, email: any) : Alumno {
+  /* crearAlummno(nombre: any, apellido: any, rut: any, telefono: any, email: any) : Alumno {
     return {
+      nombre: nombre,
+      apellido: apellido,
+      rut: rut,
+      telefono: telefono,
+      email: email
+    };
+  } */
+
+  crearAlummno(id:any, nombre: any, apellido: any, rut: any, telefono: any, email: any) : Alumno {
+    return {
+      id : id,
       nombre: nombre,
       apellido: apellido,
       rut: rut,

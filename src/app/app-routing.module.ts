@@ -7,13 +7,15 @@ import { FormularioinscripcionComponent } from './shared/components/formularioin
 import { CursosComponent } from './shared/components/cursos/cursos.component';
 import { ForminscripcionComponent } from './shared/components/forminscripcion/forminscripcion.component';
 import { CursoscontainerComponent } from './shared/components/cursoscontainer/cursoscontainer.component';
+import { LoginComponent } from './guards/auth/login/login.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'alumnos', pathMatch: 'full'},
-  {path: 'alumnos', component:ListadealumnosComponent},
-  {path: 'cursos', component:CursoscontainerComponent},
-  {path: 'inscripciones', component:ForminscripcionComponent},
-  {path: '**', redirectTo: 'alumnos', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', loadChildren:() => import('./guards/auth/login/login.module').then((m) => m.LoginModule)},
+  {path: '', loadChildren:() => import('./shared/components/listadealumnos/listadealumnos.module').then((m) => m.ListadealumnosModule)},
+  {path: '', loadChildren:() => import('./shared/components/cursoscontainer/cursoscontainer.module').then((m) => m.CursoscontainerModule)},
+  {path: '', loadChildren:() => import('./shared/components/forminscripcion/forminscripcion.module').then((m) => m.ForminscripcionModule)},
+  {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 
 @NgModule({

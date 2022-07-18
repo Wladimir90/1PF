@@ -90,13 +90,11 @@ export class ListadealumnosComponent {
 
   ngOnInit(): void { 
     this.datosalumnosService.obtenerAlumnos()
-    .then((data) => 
-        {
-          this.dataSource = data;
-          this.cantidadAlumno$ = this.datosalumnosService.cantidadAlumnoObservable(data);
-        
-        })
-
+      .then((data:any) => 
+          {
+            this.dataSource = data;
+            this.cantidadAlumno$ = this.datosalumnosService.cantidadAlumnoObservable(data); 
+          })
   }
 
   ngOnDestroy() { 

@@ -13,7 +13,7 @@
                     <mat-icon class="sidenav-icon">{{nav.icon}} </mat-icon>
                     {{nav.name}}</a> -->
 
-                    <a mat-list-item routerLink="/" class="sidenav-name">
+                    <a mat-list-item routerLink="/login" class="sidenav-name">
                         <mat-icon class="sidenav-icon"> home </mat-icon> Home </a>
 
                     <a mat-list-item routerLink="/alumnos" class="sidenav-name">
@@ -25,8 +25,11 @@
                     <a mat-list-item routerLink="/inscripciones" class="sidenav-name">
                         <mat-icon class="sidenav-icon"> school </mat-icon> Inscripciones </a>
 
-                    <a mat-list-item routerLink="/" class="sidenav-name">
-                        <mat-icon class="sidenav-icon"> mail </mat-icon> Contacto </a>
+                    
+                    <a mat-list-item class="sidenav-name" (click)="exit()"> <mat-icon class="sidenav-icon">exit_to_app</mat-icon> Cerrar Sesion </a>
+
+                    <!-- <a mat-list-item routerLink="/" class="sidenav-name">
+                        <mat-icon class="sidenav-icon"> mail </mat-icon> Contacto </a> -->
             </mat-nav-list>
         </mat-sidenav>
     

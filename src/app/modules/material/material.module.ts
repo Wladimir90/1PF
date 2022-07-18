@@ -15,6 +15,11 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
 
 
 
@@ -39,6 +44,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSlideToggleModule,
     MatMenuModule,
     MatNativeDateModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
 
   imports: [
@@ -56,7 +64,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDialogModule,
     MatSlideToggleModule,
     MatMenuModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
