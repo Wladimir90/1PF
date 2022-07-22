@@ -8,10 +8,11 @@ import { TamanofuenteDirective } from 'src/app/directives/tamanofuente.directive
 
 
 
+
 @NgModule({
   declarations: [ ListadealumnosComponent, NombreapellidoPipe, TamanofuenteDirective ],
   imports: [
-    CommonModule, MaterialModule, ListadealumnosRoutingModule
+    CommonModule, MaterialModule, ListadealumnosRoutingModule,
   ],
 })
 export class ListadealumnosModule { }

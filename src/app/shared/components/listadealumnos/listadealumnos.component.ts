@@ -8,7 +8,6 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { DatosalumnosService } from 'src/app/services/datosalumnos.service';
 import Swal from 'sweetalert2';
 import { Observable, Subscription } from 'rxjs';
-import { MatPaginator } from '@angular/material/paginator';
 import { Alumno } from 'src/app/interfaces/alumno';
 
 const listaAlumnos: Alumno[] = [];

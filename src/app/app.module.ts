@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularioinscripcionComponent } from './shared/components/formularioinscripcion/formularioinscripcion.component';
 import { EditaralumnoComponent } from './shared/components/editaralumno/editaralumno.component';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SidenavComponent } from './core/sidenav/sidenav.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent],
