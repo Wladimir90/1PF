@@ -23,9 +23,7 @@ describe('ListadealumnosComponent', () => {
         MockModule(HttpClientModule),
       ],
 
-      providers: [
-        /* MockService(DatosalumnosService) */
-      ]
+      providers: []
     })
     .compileComponents();
 

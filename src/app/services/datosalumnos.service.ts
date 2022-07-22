@@ -48,11 +48,8 @@ export class DatosalumnosService {
   } */
 
   async obtenerAlumnos():Promise<any>{
-    return this.http
-      .get('https://62ce15a7066bd2b6992faf7d.mockapi.io/api/v1/alumno/').toPromise();
-
-      /* return this.http
-      .get('https://62ce15a7066bd2b6992faf7d.mockapi.io/api/v1/alumno').toPromise(); */
+      return this.http
+      .get('https://62ce15a7066bd2b6992faf7d.mockapi.io/api/v1/alumno').toPromise();
   }
 
   /* getObtenerAlumnos(id: number):Observable<Alumno>{
