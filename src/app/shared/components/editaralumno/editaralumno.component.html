@@ -2,31 +2,36 @@
     <div class="form-group">
         
         <label for="nombre">Nombre:</label>
-        <input type="text" formControlName="nombre" class="form-control" [(ngModel)]="data.nombre">
+        <input *ngIf="data" type="text" formControlName="nombre" class="form-control" [(ngModel)]="data.nombre">
+        <input *ngIf="!data" type="text" formControlName="nombre" class="form-control">
         <span class="text-danger" *ngIf="formularioEditar.get('nombre')?.errors?.['minlength']">Número mínimo de caracteres 10</span>
         <span class="text-danger" *ngIf="formularioEditar.get('nombre')?.errors?.['required']">(Campo requerido)</span>
     </div>
     <div class="form-group">
         <label for="apellido">Apellido:</label>
-        <input type="text" formControlName="apellido" class="form-control" [(ngModel)]="data.apellido">
+        <input *ngIf="data" type="text" formControlName="apellido" class="form-control" [(ngModel)]="data.apellido">
+        <input *ngIf="!data" type="text" formControlName="apellido" class="form-control">
         <span class="text-danger" *ngIf="formularioEditar.get('apellido')?.errors?.['minlength']">Número mínimo de caracteres 10</span>
         <span class="text-danger" *ngIf="formularioEditar.get('apellido')?.errors?.['required']">(Campo requerido)</span>
     </div>
     <div class="form-group">
         <label for="rut">Rut:</label>
-        <input type="number" formControlName="rut" class="form-control" [(ngModel)]="data.rut">
+        <input *ngIf="data" type="number" formControlName="rut" class="form-control" [(ngModel)]="data.rut">
+        <input *ngIf="!data" type="text" formControlName="rut" class="form-control">
         <span class="text-danger" *ngIf="formularioEditar.get('rut')?.errors?.['pattern']"> Este campo solo admite números</span>
         <span class="text-danger" *ngIf="formularioEditar.get('rut')?.errors?.['required']">(Campo requerido)</span>
     </div>
     <div class="form-group">
         <label for="telefono">Teléfono:</label>
-        <input type="number" formControlName="telefono" class="form-control" [(ngModel)]="data.telefono">
+        <input *ngIf="data" type="number" formControlName="telefono" class="form-control" [(ngModel)]="data.telefono">
+        <input *ngIf="!data" type="number" formControlName="telefono" class="form-control">
         <span class="text-danger" *ngIf="formularioEditar.get('telefono')?.errors?.['pattern']"> Este campo solo admite números</span>
         <span class="text-danger" *ngIf="formularioEditar.get('telefono')?.errors?.['required']">(Campo requerido)</span>
     </div>
     <div class="form-group">
         <label for="email">E-mail:</label>
-        <input type="text" formControlName="email" class="form-control" [(ngModel)]="data.email">
+        <input *ngIf="data" type="text" formControlName="email" class="form-control" [(ngModel)]="data.email">
+        <input *ngIf="!data" type="text" formControlName="email" class="form-control">
         <span class="text-danger" *ngIf="formularioEditar.get('email')?.errors?.['email']">Debe ser un email valido</span>
         <span class="text-danger" *ngIf="formularioEditar.get('email')?.errors?.['required']">(Campo requerido)</span>
     </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Inject } from '@angular/core';
+import { Component, EventEmitter, OnInit, Inject, Optional } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'; 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Alumno } from '../../../interfaces/alumno';
@@ -21,8 +21,8 @@ export class FormularioinscripcionComponent implements OnInit {
   })
 
   constructor(private fb: FormBuilder,
-              public dialogRef: MatDialogRef<FormularioinscripcionComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Alumno) {}
+              @Optional() public dialogRef: MatDialogRef<FormularioinscripcionComponent>,
+              @Optional() @Inject(MAT_DIALOG_DATA) public data: Alumno) {}
 
   mostrarFormulario(): void {
     Swal.fire({

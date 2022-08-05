@@ -5,19 +5,16 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
 
 import { EditaralumnoComponent } from './editaralumno.component';
 
-fdescribe('EditaralumnoComponent', () => {
+describe('EditaralumnoComponent', () => {
   let component: EditaralumnoComponent;
   let fixture: ComponentFixture<EditaralumnoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditaralumnoComponent, MatDialogRef ],
+      declarations: [ EditaralumnoComponent,],
       imports: [
         MockModule(MatDialogModule),
         MockModule(MaterialModule),
-        
-        
-        /* MockModule(HttpClientModule), */
       ],
       providers: [
         

@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     };
   } */
 
-  crearAlummno(id:any, nombre: any, apellido: any, rut: any, telefono: any, email: any) : Alumno {
+  /* crearAlummno(id:any, nombre: any, apellido: any, rut: any, telefono: any, email: any) : Alumno {
     return {
       id : id,
       nombre: nombre,
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
       telefono: telefono,
       email: email
     };
-  }
+  } */
   
   ngOnInit(): void {
     

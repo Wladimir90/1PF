@@ -21,8 +21,8 @@ export class EditaralumnoComponent implements OnInit {
 
   alumnoSelecionado: Alumno | null = null;
 
-  constructor(public dialogRef: MatDialogRef<EditaralumnoComponent>,
-              @Inject(MAT_DIALOG_DATA) public data:any) {
+  constructor(@Optional() public dialogRef: MatDialogRef<EditaralumnoComponent>,
+              @Optional() @Inject(MAT_DIALOG_DATA) public data:any) {
                }
 
   ngOnInit(): void { }

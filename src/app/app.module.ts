@@ -10,6 +10,14 @@ import { FormularioinscripcionComponent } from './shared/components/formularioin
 import { EditaralumnoComponent } from './shared/components/editaralumno/editaralumno.component';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { StoreModule } from '@ngrx/store';
+import { MatDialogRef } from '@angular/material/dialog';
+import { EffectsModule } from '@ngrx/effects';
+import { appReducers } from './store/app.reducer';
+import { AuthEffects } from './store/effects/auth.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+
+
 
 
 @NgModule({
@@ -26,7 +34,9 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,6 +5,8 @@
         rut: number;
         telefono: number;
         email: string;
+        token: string;
+        password: string
 
         
     
