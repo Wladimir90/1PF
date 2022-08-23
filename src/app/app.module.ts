@@ -4,11 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
-import { HomeComponent } from './shared/components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioinscripcionComponent } from './shared/components/formularioinscripcion/formularioinscripcion.component';
 import { EditaralumnoComponent } from './shared/components/editaralumno/editaralumno.component';
-import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { StoreModule } from '@ngrx/store';
 import { MatDialogRef } from '@angular/material/dialog';
 import { EffectsModule } from '@ngrx/effects';
@@ -23,10 +21,8 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     FormularioinscripcionComponent,
-    EditaralumnoComponent,
-    SidenavComponent,
+    EditaralumnoComponent
   ],
   imports: [
     BrowserModule,

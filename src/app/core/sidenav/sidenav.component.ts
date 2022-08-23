@@ -1,6 +1,10 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { RouterModule, Route, Router } from '@angular/router';
+import { AUTH_ACTIONS } from 'src/app/store/actions/auth.action';
+import { Store } from '@ngrx/store';
+import { DashboardModule } from 'src/app/shared/components/dashboard/dashboard.module';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -14,13 +18,12 @@ export class SidenavComponent implements OnDestroy {
     {name: "Home", route: "HomeComponent",icon:"home"},
     {name: "Alumnos", route:"alumnos",icon:"group"},
     {name: "Cursos", route:"",icon:"menu_book"},
-    {name: "Inscripciones", rote:"FormularioinscripcionComponent",icon:"school"},
-    {name: "Contacto", route:"",icon:"mail"}
+    {name: "Inscripciones", rote:"FormularioinscripcionComponent",icon:"school"}
 ];
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) { 
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router, private store:Store) { 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -30,9 +33,9 @@ export class SidenavComponent implements OnDestroy {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
+
   exit() {
-    localStorage.removeItem('tipo_user');
-    this.router.navigate(['login']);
+    this.store.dispatch(AUTH_ACTIONS.Logout.run())
   }
 
   shouldRun = true;

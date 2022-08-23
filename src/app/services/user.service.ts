@@ -24,7 +24,6 @@ export class UserService {
         return users.find(user =>  user.username == username && user.password == password) || null
       }),
       catchError((error) => {
-        console.log(error)
         throw new Error()
       })
     );

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { MaterialModule } from '../modules/material/material.module';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    CommonModule, MaterialModule,
   ]
 })
 export class CoreModule { }

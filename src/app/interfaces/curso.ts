@@ -1,8 +1,7 @@
-interface Cursos {
+/* export interface Icurso {
+    id: number;
     curso: string;
-    profesor: string;
-    dias: string;
-    horario: string;
-    inicio: string;
-    termino: string
-}
+    estado: string;
+    
+    
+} */

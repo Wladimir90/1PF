@@ -1,4 +1,5 @@
 import { createAction, props } from "@ngrx/store";
+import { Alumno } from "src/app/interfaces/alumno";
 import { Iuser } from '../../interfaces/user';
 
 

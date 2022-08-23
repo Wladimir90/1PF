@@ -6,6 +6,7 @@ import { UserService } from 'src/app/services/user.service';
 import { AUTH_ACTIONS } from '../actions/auth.action';
 import { emptyAction } from '../app.reducer';
 
+
 @Injectable({providedIn: 'root'})
 export class AuthEffects {
   constructor(private actions$: Actions, private userService:UserService, private router: Router) { }
@@ -30,7 +31,7 @@ export class AuthEffects {
         console.log('login success effects')
         localStorage.setItem('token', token)
         localStorage.setItem('remenber', remember+'')
-        this.router.navigate(['/'])
+        this.router.navigate(['/home'])
         return emptyAction()
       })
     )

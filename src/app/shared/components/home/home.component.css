@@ -1,12 +1,16 @@
-table {
-    width: 100%;
-  }
+.presentacion {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+  align-items: top;
+  padding-left: 150px;
+}
 
-  th {
-    width: 15%;
-  }
+.imagen {
+  padding-left: 150px;
+}
 
-  .iconsTable {
-    margin-left: 8%;
-    cursor: pointer;
-  };
+.titulo h1 {
+  font-size: 50px;
+  font-style: italic;
+}

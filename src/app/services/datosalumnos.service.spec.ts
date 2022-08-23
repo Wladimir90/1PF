@@ -38,14 +38,4 @@ describe('DatosalumnosService', () => {
 
     done();
   });
-
-  /* it('enviar lista de alumnos', () => {
-    service.obtenerAlumnos(1)
-      .then(alumno => {
-        expect( alumno.id ).toBe(1);
-
-       
-    }) 
-    
-  });*/
 });

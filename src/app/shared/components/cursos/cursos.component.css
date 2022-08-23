@@ -1,4 +1,20 @@
-.example-card {
-    max-width: 400px;
-    margin: 15px;
+  .example-card {
+    max-width: 380px;
   }
+
+  .img-cursos {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  th {
+    width: 15%;
+  }
+  
+  .iconsTable {
+    margin-left: 8%;
+    cursor: pointer;
+  };

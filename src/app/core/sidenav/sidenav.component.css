@@ -42,6 +42,6 @@
     margin-top: 10px;
   }
 
- /*  .mat-drawer-container{
-    background-origin: unset;
-  } */
+  .example-spacer {
+    flex: 1 1 auto;
+  }

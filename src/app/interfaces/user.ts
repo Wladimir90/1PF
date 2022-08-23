@@ -1,13 +1,11 @@
 export interface Iuser {
-    id: string;
-    nombre: string;
-    loading?: boolean;
-    error?: string;
-    token: string;
-    password: string;
-    username: string
+        id: number;
+        nombre: string;
+        apellido: string;
+        rut: number;
+        telefono: number;
+        email: string;
+        token: string;
+        password: string
+        username: string
 }
-
-/* export class User implements Iuser {
-    constructor (public id: string, public nombre: string){}
-} */

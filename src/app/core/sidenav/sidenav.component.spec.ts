@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'ng-mocks';
 
 import { SidenavComponent } from './sidenav.component';
+import { StoreModule } from '@ngrx/store';
 
 describe('SidenavComponent', () => {
   let component: SidenavComponent;
@@ -12,7 +13,10 @@ describe('SidenavComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SidenavComponent ],
       imports: [
-        MockModule(RouterTestingModule)
+        MockModule(RouterTestingModule),
+        StoreModule.forRoot({ })
+      ],
+      providers: [
       ],
     })
     .compileComponents();
